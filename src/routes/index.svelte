@@ -3,15 +3,13 @@
 </script>
 
 <script lang="ts">
-	import Counter from '$lib/Counter.svelte';
-
 	import InfiniteScroll from 'svelte-infinite-scroll';
 	import { LoremIpsum } from 'lorem-ipsum';
 
 	const lorem = new LoremIpsum({
 		sentencesPerParagraph: {
-			max: 8,
-			min: 4
+			max: 12,
+			min: 6
 		},
 		wordsPerSentence: {
 			max: 16,
@@ -19,7 +17,8 @@
 		}
 	});
 
-	let paragraph = 15;
+	let page: number = 1;
+	let paragraph: number = 15;
 </script>
 
 <svelte:head>
@@ -42,9 +41,7 @@
 		<h2 class="text-xl pt-1 font-light tracking-wider">Ille infinitum volumen Lorem Ipsum</h2>
 	</div>
 
-	<!-- <Counter /> -->
-
-	<div class="pt-8 max-w-4xl text-justify overflow-x-clip">
+	<div class="pt-8 max-w-4xl text-justify">
 		<p
 			class="first-letter:text-7xl first-letter:bg-slate-700 first-letter:text-gray-100 first-letter:float-left first-letter:px-2 first-letter:mr-2 first-letter:shadow-md"
 		>
@@ -54,12 +51,13 @@
 			voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
 			non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 		</p>
-		<p>{lorem.generateParagraphs(paragraph)}</p>
+		<p class="overflow-x-hidden">{lorem.generateParagraphs(paragraph)}</p>
 		<InfiniteScroll
-			threshold={350}
+			threshold={100 * page ** 1.25}
 			window={true}
 			on:loadMore={() => {
-				paragraph = paragraph + 30;
+				paragraph = paragraph + 10 * page;
+				page++;
 			}}
 		/>
 	</div>
