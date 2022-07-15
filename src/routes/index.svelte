@@ -27,7 +27,7 @@
 </svelte:head>
 
 <section>
-	<h1 class="pt-8">
+	<h1 class="pt-1">
 		<span class="welcome">
 			<picture>
 				<source srcset="svelte-welcome.webp" type="image/webp" />
