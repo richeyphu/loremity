@@ -37,15 +37,15 @@
     </h1>
 
     <div class="pt-0">
-        <h1 class="text-3xl md:text-5xl font-semibold tracking-wide">Loremity</h1>
-        <h2 class="text-md md:text-xl pt-1 font-light tracking-wider">
+        <h1 class="text-3xl md:text-5xl tracking-wide font-serif font-semibold">Loremity</h1>
+        <h2 class="text-md md:text-xl pt-1 tracking-wider font-serif font-light">
             Ille infinitum volumen Lorem Ipsum
         </h2>
     </div>
 
     <div class="pt-8 max-w-4xl text-justify">
         <p
-            class="first-letter:text-7xl first-letter:bg-slate-700 first-letter:text-gray-100 first-letter:float-left first-letter:px-2 first-letter:mr-2 first-letter:shadow-md"
+            class="first-letter:text-7xl first-letter:bg-slate-700 first-letter:text-gray-100 first-letter:float-left first-letter:px-2 first-letter:mr-2 first-letter:shadow-md first-letter:font-serif"
         >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
