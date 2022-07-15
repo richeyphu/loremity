@@ -37,8 +37,10 @@
     </h1>
 
     <div class="pt-0">
-        <h1 class="text-5xl font-semibold tracking-wide">Loremity</h1>
-        <h2 class="text-xl pt-1 font-light tracking-wider">Ille infinitum volumen Lorem Ipsum</h2>
+        <h1 class="text-3xl md:text-5xl font-semibold tracking-wide">Loremity</h1>
+        <h2 class="text-md md:text-xl pt-1 font-light tracking-wider">
+            Ille infinitum volumen Lorem Ipsum
+        </h2>
     </div>
 
     <div class="pt-8 max-w-4xl text-justify">
