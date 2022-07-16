@@ -3,15 +3,25 @@
     import '../app.css';
 </script>
 
-<Header />
+<div>
+    <Header />
 
-<main>
-    <slot />
-</main>
+    <main>
+        <slot />
+    </main>
 
-<footer>
-    <p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-</footer>
+    <footer>
+        <p>
+            no
+            <!-- svelte-ignore a11y-invalid-attribute -->
+            <a
+                href="#"
+                on:click={() => (location.href = 'https://youtu.be/dQw4w9WgXcQ')}
+                >you!</a
+            >
+        </p>
+    </footer>
+</div>
 
 <style>
     main {
