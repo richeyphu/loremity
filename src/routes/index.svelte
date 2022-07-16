@@ -24,6 +24,7 @@
 <svelte:head>
     <title>Loremity | Infinitum</title>
     <meta name="description" content="Loremity: Ille infinitum volumen Lorem Ipsum" />
+    <script async src="https://api.countapi.xyz/hit/loremity-web/visits"></script>
 </svelte:head>
 
 <section>
