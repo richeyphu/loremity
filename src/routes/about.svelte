@@ -20,16 +20,16 @@
 </svelte:head>
 
 <div class="content">
-    <h1>About this app</h1>
+    <h1 class="dark:text-gray-200">About this app</h1>
 
-    <p>
+    <p class="dark:text-gray-200">
         This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing
         the following into your command line and following the prompts:
     </p>
 
-    <pre>npm init svelte</pre>
+    <pre class="dark:text-gray-200">npm init svelte</pre>
 
-    <p>
+    <p class="dark:text-gray-200">
         The page you're looking at is purely static HTML, with no client-side interactivity needed.
         Because of that, we don't need to load any JavaScript. Try viewing the page's source, or
         opening the devtools network panel and reloading.

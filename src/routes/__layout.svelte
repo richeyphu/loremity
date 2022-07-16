@@ -1,9 +1,12 @@
 <script lang="ts">
     import Header from '$lib/header/Header.svelte';
     import '../app.css';
+    import { darkTheme } from '$lib/store.js'
+
+    $: dark = $darkTheme
 </script>
 
-<div>
+<div class:dark>
     <Header />
 
     <main>
@@ -11,7 +14,7 @@
     </main>
 
     <footer>
-        <p>
+        <p class="dark:text-gray-200">
             no
             <!-- svelte-ignore a11y-invalid-attribute -->
             <a
