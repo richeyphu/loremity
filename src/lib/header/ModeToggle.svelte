@@ -1,9 +1,14 @@
 <script lang="ts">
+    import { browser } from '$app/env';
     import { darkTheme } from '$lib/store.js';
-    const toggleDark = () => {
-        $darkTheme = !$darkTheme;
-        document.documentElement.setAttribute('data-theme', $darkTheme ? 'dark' : 'light');
-    };
+    const toggleDark = () => ($darkTheme = !$darkTheme);
+
+    $: (() => {
+        if (browser) {
+            localStorage.theme = $darkTheme ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', localStorage.theme);
+        }
+    })();
 </script>
 
 <div class="fixed top-2 left-2">
