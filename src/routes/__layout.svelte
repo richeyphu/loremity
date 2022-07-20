@@ -1,17 +1,30 @@
 <script lang="ts">
     import Header from '$lib/header/Header.svelte';
     import '../app.css';
+    import { darkTheme } from '$lib/store.js'
+
+    $: dark = $darkTheme
 </script>
 
-<Header />
+<div class:dark>
+    <Header />
 
-<main>
-    <slot />
-</main>
+    <main>
+        <slot />
+    </main>
 
-<footer>
-    <p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-</footer>
+    <footer>
+        <p class="dark:text-gray-200">
+            no
+            <!-- svelte-ignore a11y-invalid-attribute -->
+            <a
+                href="#"
+                on:click={() => (location.href = 'https://youtu.be/dQw4w9WgXcQ')}
+                >you!</a
+            >
+        </p>
+    </footer>
+</div>
 
 <style>
     main {

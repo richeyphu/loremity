@@ -1,4 +1,4 @@
-<div class="fixed right-0">
+<div class="fixed right-0 dark:invert">
     <a
         href="https://github.com/richeyphu/loremity"
         target="_blank"

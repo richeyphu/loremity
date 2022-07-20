@@ -1,14 +1,13 @@
 <script lang="ts">
     // import { page } from '$app/stores';
     // import logo from './svelte-logo.svg';
-    import GitHubCorner from './GithubCorner.svelte';
+    import GithubCorner from './GithubCorner.svelte';
+    import ModeToggle from './ModeToggle.svelte';
 </script>
 
 <header>
     <div class="corner">
-        <!-- <a href="https://kit.svelte.dev">
-			<img src={logo} alt="SvelteKit" />
-		</a> -->
+        <ModeToggle />
     </div>
 
     <nav>
@@ -16,7 +15,7 @@
     </nav>
 
     <div class="corner">
-        <GitHubCorner />
+        <GithubCorner />
     </div>
 </header>
 
