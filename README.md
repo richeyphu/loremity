@@ -7,7 +7,7 @@
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/richeyphu/loremity)](https://github.com/richeyphu/loremity/pulls)
 
 <p align="center">
-  <img src="static/favicon.png" width="300" alt="icon" />
+  <img src="static/img/cover.png" alt="cover" />
   <br/>
   <b>Loremity</b>
   <br/>
