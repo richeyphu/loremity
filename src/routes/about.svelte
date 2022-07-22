@@ -20,6 +20,8 @@
 </svelte:head>
 
 <div class="content">
+    <img src="img/cover.png" alt="cover" class="mix-blend-multiply dark:invert dark:mix-blend-screen" />
+
     <h1 class="dark:text-gray-200">About this app</h1>
 
     <p class="dark:text-gray-200">
