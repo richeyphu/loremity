@@ -3,6 +3,7 @@
 </script>
 
 <script lang="ts">
+    import { onMount } from 'svelte';
     import InfiniteScroll from 'svelte-infinite-scroll';
     import { LoremIpsum } from 'lorem-ipsum';
 
@@ -19,6 +20,17 @@
 
     let page: number = 1;
     let paragraph: number = 15;
+
+    let container: HTMLElement;
+    const generateParagraphs = () => {
+        const child = document.createElement('p');
+        child.textContent = lorem.generateParagraphs(paragraph);
+        child.className = 'dark:text-gray-200';
+        container.appendChild(child);
+    };
+    onMount(() => {
+        generateParagraphs();
+    });
 </script>
 
 <svelte:head>
@@ -46,7 +58,7 @@
         </h2>
     </div>
 
-    <div class="pt-8 max-w-4xl text-justify">
+    <div class="pt-8 max-w-4xl text-justify ">
         <p
             class="first-letter:text-7xl first-letter:bg-slate-700 first-letter:text-gray-200 first-letter:float-left first-letter:px-2 first-letter:mr-2 first-letter:shadow-md first-letter:font-serif  dark:text-gray-200 dark:first-letter:bg-slate-100 dark:first-letter:text-slate-700 dark:first-letter:shadow-slate-600"
         >
@@ -57,13 +69,15 @@
             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
             mollit anim id est laborum.
         </p>
-        <p class="overflow-x-hidden  dark:text-gray-200">{lorem.generateParagraphs(paragraph)}</p>
+        <p class="overflow-x-hidden dark:text-gray-200">{lorem.generateParagraphs(6)}</p>
+        <div class="overflow-x-hidden" bind:this={container} />
         <InfiniteScroll
             threshold={100 * page ** 1.25}
             window={true}
             on:loadMore={() => {
-                paragraph = paragraph + 10 * page;
-                page++;
+                paragraph += 10; // * page;
+                // page++;
+                generateParagraphs();
             }}
         />
     </div>
