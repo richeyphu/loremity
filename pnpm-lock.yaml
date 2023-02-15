@@ -2,9 +2,12 @@ lockfileVersion: 5.4
 
 specifiers:
   '@fontsource/fira-mono': ^4.5.10
+  '@playwright/test': ^1.30.0
   '@sveltejs/adapter-auto': 2.0.0
   '@sveltejs/kit': 1.6.0
   '@types/cookie': ^0.5.1
+  '@types/eslint': ^8.21.1
+  '@types/prettier': ^2.7.2
   '@typescript-eslint/eslint-plugin': ^5.52.0
   '@typescript-eslint/parser': ^5.52.0
   autoprefixer: ^10.4.13
@@ -32,9 +35,12 @@ dependencies:
   svelte-infinite-scroll: 2.0.1
 
 devDependencies:
+  '@playwright/test': 1.30.0
   '@sveltejs/adapter-auto': 2.0.0_@sveltejs+kit@1.6.0
   '@sveltejs/kit': 1.6.0_svelte@3.55.1+vite@4.1.1
   '@types/cookie': 0.5.1
+  '@types/eslint': 8.21.1
+  '@types/prettier': 2.7.2
   '@typescript-eslint/eslint-plugin': 5.52.0_6cfvjsbua5ptj65675bqcn6oza
   '@typescript-eslint/parser': 5.52.0_7kw3g6rralp5ps6mg3uyzz6azm
   autoprefixer: 10.4.13_postcss@8.4.21
@@ -330,6 +336,15 @@ packages:
       fastq: 1.13.0
     dev: true
 
+  /@playwright/test/1.30.0:
+    resolution: {integrity: sha512-SVxkQw1xvn/Wk/EvBnqWIq6NLo1AppwbYOjNLmyU0R1RoQ3rLEBtmjTnElcnz8VEtn11fptj1ECxK0tgURhajw==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dependencies:
+      '@types/node': 18.0.4
+      playwright-core: 1.30.0
+    dev: true
+
   /@polka/url/1.0.0-next.21:
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
     dev: true
@@ -394,12 +409,27 @@ packages:
     resolution: {integrity: sha512-COUnqfB2+ckwXXSFInsFdOAWQzCCx+a5hq2ruyj+Vjund94RJQd4LG2u9hnvJrTgunKAaax7ancBYlDrNYxA0g==}
     dev: true
 
+  /@types/eslint/8.21.1:
+    resolution: {integrity: sha512-rc9K8ZpVjNcLs8Fp0dkozd5Pt2Apk1glO4Vgz8ix1u6yFByxfqo5Yavpy65o+93TAe24jr7v+eSBtFLvOQtCRQ==}
+    dependencies:
+      '@types/estree': 1.0.0
+      '@types/json-schema': 7.0.11
+    dev: true
+
+  /@types/estree/1.0.0:
+    resolution: {integrity: sha512-WulqXMDUTYAXCjZnk6JtIHPigp55cVtDgDrO2gHRwhyJto21+1zbVCtOYB2L1F9w4qCQ0rOGWBnBe0FNTiEJIQ==}
+    dev: true
+
   /@types/json-schema/7.0.11:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
     dev: true
 
   /@types/node/18.0.4:
     resolution: {integrity: sha512-M0+G6V0Y4YV8cqzHssZpaNCqvYwlCiulmm0PwpNLF55r/+cT8Ol42CHRU1SEaYFH2rTwiiE1aYg/2g2rrtGdPA==}
+    dev: true
+
+  /@types/prettier/2.7.2:
+    resolution: {integrity: sha512-KufADq8uQqo1pYKVIYzfKbJfBAc0sOeXqGbFaSpv8MRmC/zXgowNZmFcbngndGk922QDmOASEXUZCaY48gs4cg==}
     dev: true
 
   /@types/pug/2.0.6:
@@ -1477,6 +1507,12 @@ packages:
   /pify/2.3.0:
     resolution: {integrity: sha512-udgsAY+fTnvv7kI7aaxbqwWNb0AHiB0qBO89PZKPkoTmGOgdbrHDKD+0B2X4uTfJ/FT1R09r9gTsjUjNJotuog==}
     engines: {node: '>=0.10.0'}
+    dev: true
+
+  /playwright-core/1.30.0:
+    resolution: {integrity: sha512-7AnRmTCf+GVYhHbLJsGUtskWTE33SwMZkybJ0v6rqR1boxq2x36U7p1vDRV7HO2IwTZgmycracLxPEJI49wu4g==}
+    engines: {node: '>=14'}
+    hasBin: true
     dev: true
 
   /postcss-import/14.1.0_postcss@8.4.21:
