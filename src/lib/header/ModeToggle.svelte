@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { browser } from '$app/env';
+    import { browser } from '$app/environment';
     import { darkTheme } from '$lib/store.js';
     const toggleDark = () => ($darkTheme = !$darkTheme);
 

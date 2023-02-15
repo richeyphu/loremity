@@ -1,7 +1,3 @@
-<script context="module" lang="ts">
-    export const prerender = true;
-</script>
-
 <script lang="ts">
     import { onMount } from 'svelte';
     import InfiniteScroll from 'svelte-infinite-scroll';

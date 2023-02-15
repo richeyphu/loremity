@@ -2,6 +2,7 @@
     <a
         href="https://github.com/richeyphu/loremity"
         target="_blank"
+        rel="noopener noreferrer"
         class="github-corner"
         aria-label="View source on GitHub"
         ><svg
