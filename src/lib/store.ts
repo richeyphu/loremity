@@ -3,12 +3,12 @@ import { browser } from '$app/environment';
 
 let themeValue = false;
 if (browser) {
-    if (
-        localStorage.theme === 'dark' ||
-        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-    ) {
-        themeValue = true;
-    }
+	if (
+		localStorage.theme === 'dark' ||
+		(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+	) {
+		themeValue = true;
+	}
 }
 
 export const darkTheme = writable(themeValue);

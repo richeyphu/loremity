@@ -1,36 +1,36 @@
 <script lang="ts">
-    // import { page } from '$app/stores';
-    // import logo from './svelte-logo.svg';
-    import GithubCorner from './GithubCorner.svelte';
-    import ModeToggle from './ModeToggle.svelte';
+	// import { page } from '$app/stores';
+	// import logo from './svelte-logo.svg';
+	import GithubCorner from './GithubCorner.svelte';
+	import ModeToggle from './ModeToggle.svelte';
 </script>
 
 <header>
-    <div class="corner">
-        <ModeToggle />
-    </div>
+	<div class="corner">
+		<ModeToggle />
+	</div>
 
-    <nav>
-        <!-- TODO -->
-    </nav>
+	<nav>
+		<!-- TODO -->
+	</nav>
 
-    <div class="corner">
-        <GithubCorner />
-    </div>
+	<div class="corner">
+		<GithubCorner />
+	</div>
 </header>
 
 <style>
-    header {
-        display: flex;
-        justify-content: space-between;
-    }
+	header {
+		display: flex;
+		justify-content: space-between;
+	}
 
-    .corner {
-        width: 3em;
-        height: 3em;
-    }
+	.corner {
+		width: 3em;
+		height: 3em;
+	}
 
-    /* .corner a {
+	/* .corner a {
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -44,13 +44,13 @@
 		object-fit: contain;
 	} */
 
-    nav {
-        display: flex;
-        justify-content: center;
-        --background: rgba(255, 255, 255, 0.7);
-    }
+	nav {
+		display: flex;
+		justify-content: center;
+		--background: rgba(255, 255, 255, 0.7);
+	}
 
-    /* svg {
+	/* svg {
 		width: 2em;
 		height: 3em;
 		display: block;
