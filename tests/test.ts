@@ -10,9 +10,37 @@ test('home page has expected h1', async ({ page }) => {
 	await expect(page.getByRole('heading', { name: 'Loremity' })).toBeVisible();
 });
 
-test('home page has not expected footer to be reachable', async ({ page }) => {
+test('home page has expected footer to be unreachable', async ({ page }) => {
 	await page.goto('/');
 	await page.setViewportSize({ width: 1920, height: 1080 });
-	await page.mouse.wheel(0, 1000);
-	await expect(page.locator('footer')).not.toBeVisible({ timeout: 1000 });
+
+	[...Array(10)].forEach(async (_, i) => {
+		await page.mouse.wheel(0, 1000 * i + 1);
+		await page.waitForTimeout(100);
+	});
+
+	const isVisible = await page.evaluate((selector) => {
+		let isVisible = false;
+		const element = document.querySelector(selector);
+		if (element) {
+			const rect = element.getBoundingClientRect();
+			if (rect.top >= 0 && rect.left >= 0) {
+				const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+				const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+				if (rect.right <= vw && rect.bottom <= vh) {
+					isVisible = true;
+				}
+			}
+		}
+		return isVisible;
+	}, 'footer');
+
+	expect(isVisible).toBeFalsy();
 });
+
+// test('home page can be accessed while offline', async ({ page, context }) => {
+// 	await page.goto('/');
+// 	await context.setOffline(true);
+// 	await page.reload();
+// 	await expect(page.getByRole('heading', { name: 'Loremity' })).toBeVisible();
+// });
