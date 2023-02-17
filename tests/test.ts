@@ -14,10 +14,10 @@ test('home page has expected footer to be unreachable', async ({ page }) => {
 	await page.goto('/');
 	await page.setViewportSize({ width: 1920, height: 1080 });
 
-	[...Array(10)].forEach(async (_, i) => {
-		await page.mouse.wheel(0, 1000 * i + 1);
+	for (let i = 0; i < 100; i++) {
+		await page.mouse.wheel(0, 1000);
 		await page.waitForTimeout(100);
-	});
+	}
 
 	const isVisible = await page.evaluate((selector) => {
 		let isVisible = false;
