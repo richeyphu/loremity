@@ -16,6 +16,7 @@
 		on:click={toggleDark}
 		type="button"
 		class="text-slate-700 border-0 border-slate-700 hover:bg-slate-300 hover:bg-opacity-60 focus:ring-4 focus:outline-none focus:ring-slate-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center dark:border-slate-500 dark:text-gray-100 dark:focus:ring-slate-800 dark:hover:bg-slate-600 dark:hover:bg-opacity-30"
+		aria-label={($darkTheme ? 'Light' : 'Dark') + ' mode'}
 	>
 		<svg
 			id="theme-toggle-dark-icon"
