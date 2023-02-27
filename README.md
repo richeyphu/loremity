@@ -20,8 +20,8 @@
 ## Setup
 
 - Clone/fork this repository
-- Install dependencies: `yarn` or `npm install`
-- Run the development server: `yarn dev` or `npm run dev`
+- Install dependencies: `pnpm install`
+- Run the development server: `pnpm dev`
 
 ## Support me
 
