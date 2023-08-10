@@ -1,7 +1,11 @@
 <script lang="ts">
+	import { dev } from '$app/environment';
+	import { inject } from '@vercel/analytics';
 	import Header from '$lib/header/Header.svelte';
 	import '../app.css';
 	import { darkTheme } from '$lib/store.js';
+
+	inject({ mode: dev ? 'development' : 'production' });
 
 	$: dark = $darkTheme;
 </script>
