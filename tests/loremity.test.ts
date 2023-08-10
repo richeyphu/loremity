@@ -26,7 +26,7 @@ test.describe('Infinite Scroll', () => {
 			await page.waitForTimeout(10);
 		}
 	};
-	
+
 	test.beforeEach(async ({ page }) => {
 		await page.goto('/');
 	});

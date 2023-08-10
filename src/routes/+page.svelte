@@ -54,9 +54,9 @@
 		</h2>
 	</div>
 
-	<div class="pt-8 max-w-4xl text-justify ">
+	<div class="pt-8 max-w-4xl text-justify">
 		<p
-			class="first-letter:text-7xl first-letter:bg-slate-700 first-letter:text-gray-200 first-letter:float-left first-letter:px-2 first-letter:mr-2 first-letter:shadow-md first-letter:font-serif  dark:text-gray-200 dark:first-letter:bg-slate-100 dark:first-letter:text-slate-700 dark:first-letter:shadow-slate-600"
+			class="first-letter:text-7xl first-letter:bg-slate-700 first-letter:text-gray-200 first-letter:float-left first-letter:px-2 first-letter:mr-2 first-letter:shadow-md first-letter:font-serif dark:text-gray-200 dark:first-letter:bg-slate-100 dark:first-letter:text-slate-700 dark:first-letter:shadow-slate-600"
 		>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
 			labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
